@@ -9,19 +9,25 @@
 </head>
 
 <body>
+    <p>Hvad er længden?</p>
+    <input type="text" id="længde">
+    <p>Hvad er bredden?</p>
+    <input type="text" id="bredden">
+    <button>Klik og bregn areal, kig i konsollen</button>
 
-
-    <input type="text" id="navn">
-    <button>Klik og kig i consollen</button>
     <script>
         document.querySelector("button").addEventListener("click", buttonClicked);
 
         function buttonClicked() {
-            let brugerNavn = document.querySelector("#navn").value;
-            consol.log(`Tillykke dit navn er ${brugerNavn}`);
+            let længde = document.querySelector("#længde").value;
+            let bredde = document.querySelector("#bredde").value;
+            let areal = længde * bredde;
+            let resultat = `Længden er ${længde} meter og bredden er ${bredde} meter. Arealet er ${areal}`;
+            console.log(resultat);
         }
 
     </script>
+
 
 </body>
 
